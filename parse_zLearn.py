@@ -3,7 +3,7 @@
 nick = []
 word = []
 desc = []
-
+new = open("file.dat","w")
 
 with open("zLearn.txt", encoding="utf8", errors='ignore') as file:
    
@@ -24,5 +24,8 @@ with open("zLearn.txt", encoding="utf8", errors='ignore') as file:
             clean_desc = line[1:]
             desc.append(clean_desc)
         
-    
-print(desc)
+for x in range (0,len(nick)):
+            
+    new.write(nick[x] + ' ')
+    new.write(word[x] + ' ')
+    new.write(desc[x] + '\n')
